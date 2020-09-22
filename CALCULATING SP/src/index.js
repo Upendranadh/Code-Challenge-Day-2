@@ -2,8 +2,17 @@
 // Write a Function to compute the roundof selling price.
 
 // Write a Function to return compute the doundof selling price.
-function find_SellingPrice(a,b){
-    
-    return null;
+function find_SellingPrice(a, b) {
+  // loss=((costprice-sellingprice)/cp)*100
+  // The above is the formuala for loss
+  /*
+    formula to calculate the sp
+   sp=cp- (loss*cp)/100
+   */
+  let sellingprice;
+  sellingprice = a - Math.round((b * a) / 100);
+  if (sellingprice) return sellingprice;
+
+  return null;
 }
 //Use SpecRunner to check the Test Cases.
